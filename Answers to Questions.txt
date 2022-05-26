@@ -9,7 +9,7 @@ Usage Instructions:
 
 1.)clone the github repo into a local folder on your computer
 
-git clone https://github.com/mahasamadhi/Ficara-Interview-Problem.git
+git clone https://github.com/mahasamadhi/BenFicara-Interview-Problem.git
 
 2.) run npm install in /code directory
 
