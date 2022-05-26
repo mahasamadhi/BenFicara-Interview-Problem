@@ -1,0 +1,27 @@
+{
+  "name": "ficara_interview-problem",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "start": "set NODE_ENV=test&& node main.js",
+    "append": "set NODE_ENV=test&& node main_append.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mahasamadhi/Ficara_Interview_Problem.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mahasamadhi/Ficara_Interview_Problem/issues"
+  },
+  "homepage": "https://github.com/mahasamadhi/Ficara_Interview_Problem#readme",
+  "dependencies": {
+    "api": "^4.5.1",
+    "dotenv": "^16.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.35"
+  }
+}

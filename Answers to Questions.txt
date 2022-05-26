@@ -1,0 +1,43 @@
+•	How long, roughly, did you spend working on this project? 
+
+Answer: About 5 hours - with some trouble, should've taken less. Had to refresh on some concepts.
+
+•	Give the steps needed to deploy and run your code, written so that someone else can follow and execute them.
+
+(You can find this in the readme.txt file in the main directory)
+Usage Instructions:
+
+1.)clone the github repo into a local folder on your computer
+
+git clone https://github.com/mahasamadhi/Ficara-Interview-Problem.git
+
+2.) run npm install in /code directory
+
+3.) put your username and api key in /code/.env.test
+
+Options:
+
+1.) To generate a new report with every execution, overwriting the previous one, use "npm start"
+
+2.) To generate the report as a record, keeping previous queries, use "npm run append"
+
+The report file can be seen in the reports folder at "report.txt". Errors are also reported in the text file.
+
+•	What could you do to improve your code for this project if you had more time? Could you make it more efficient, easier to read, more maintainable? If it were your job to run this report monthly using your code, could it be made easier or more flexible? Give specifics where possible.
+
+A: If I had more time I could improve the error handling. I believe that's the weakest point in the program. 
+
+A: With regard to formatting, I could've made it easier to read. Structurally I could've significantly improved readability by using a typed language.
+
+A: I could make it easier to run the program using a windows batch file. I could also schedule it to run every month automatically and send the result to an email address. I could set it up to run through a Node Express server and create an API to be able to generate a report from anywhere.
+And as far as the format of the report, I could determine an option that would best suit my needs.
+
+•	Outline a testing plan for this report, imagining that you are handing it off to someone else to test. What did you do to test this as you developed it? What kinds of automated testing could be helpful here?
+
+A: 
+I would test each of the methods in the two classes found in DataService.js and ReportMakerService.js for both success and failure with different status codes.
+Then start tesing on the main function, getReportData(), found in main.js that contains the bulk of the function calls and complexity. I would mock the http calls with fake data to make sure the function is executing correctly, given successful api calls. Then do testing for failure at multiple points in the function with different failure modes. If the first API call succeeds, but the second set of calls fail. Or if the first 2 succeed but the 3rd set fails. etc.
+
+For the ReportMakerService I could test for success and various different failure scenarios of the fs.writeFile & fs.readFile functions.
+
+As I was developing the solution I used the debugger built into Visual Studio Code for testing. I used strategically set breakpoints to analyze the flow of the program, api response, and debug the issues that I encountered along the way. To test for failures I inserted bad code or parameters at key points in the program to test failure at key points.
