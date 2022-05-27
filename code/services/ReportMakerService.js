@@ -50,13 +50,14 @@ class ReportMaker {
     
 
     reportError(error) {
-      fs.writeFile('../reports/report.txt', JSON.stringify(error.name + ': ' + error.message + 'at ' + error.stack), { flag: "a+" }, (err)=>{
+      fs.writeFile('../reports/report.txt', JSON.stringify("Error Message:"+error.message), { flag: "a+" }, (err)=>{
         if (err) {
           console.log(err);
           return err
         }
         else {
           console.log("Error written to file successfully\n");
+          return
         }
     })
     }

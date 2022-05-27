@@ -22,10 +22,11 @@ class DataService {
         "https://api.myngp.com/v2/broadcastEmails",
         this.options
       );
+      if(res.status === 401) {
+        throw Error('401 Unauthorized! Check your API key and Username')
+      }
       return res.json()
     } catch (err) {
-      
-      console.error(err);
       throw err; 
     }
   }
