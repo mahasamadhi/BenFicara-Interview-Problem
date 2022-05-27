@@ -18,6 +18,7 @@ class DataService {
   async getBroadCastEmails() {
 
     try {
+      console.log('Fetching Email List...')
       const res = await fetch(
         "https://api.myngp.com/v2/broadcastEmails",
         this.options

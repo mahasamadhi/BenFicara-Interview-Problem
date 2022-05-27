@@ -26,6 +26,7 @@ async function getReportData() {
     });
     //-gets the details of each email from: https://api.myngp.com/v2/broadcastEmails/{emailMessageId}
     for (z = 0; z < allEmails.length; z++) {
+      if(z === 0) {console.log('Fetching Email Details...')}
       allEmailsDetail.push(
         await dataService.getOneEmail(allEmails[z].emailMessageId)
       );
@@ -33,6 +34,7 @@ async function getReportData() {
     await Promise.all(allEmailsDetail);
     //get variants for each email
     for (var i = 0; i < allEmailsDetail.length; i++) {
+      if(i === 0) {console.log('Fetching Email Variants...')}
       var promiseVariantList = [];
       for (var x = 0; x < allEmailsDetail[i].variants.length; x++) {
         promiseVariantList.push(
